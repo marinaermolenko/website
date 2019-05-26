@@ -438,6 +438,10 @@ body {
     color: white;
 }
 
+.code-tool-without-example code {
+    overflow-x: auto;
+}
+
 
 @keyframes slidein {
     from {
@@ -567,6 +571,7 @@ body {
 
     .code-tool-without-example code {
         font-size: 3.2vw;
+        overflow-x: auto;
     }
 
     .push li:before {
