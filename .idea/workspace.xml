@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7abce285-3fe0-402e-9822-5232b73fc962" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/pages/calc.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/fonts.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/fonts.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,11 +25,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/fonts.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="302" column="21" selection-start-line="302" selection-start-column="21" selection-end-line="302" selection-end-column="21" />
+            <state relative-caret-position="2366">
+              <caret line="334" column="57" lean-forward="true" selection-start-line="334" selection-start-column="57" selection-end-line="334" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -47,13 +46,45 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/animation.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="601">
-              <caret line="262" column="14" lean-forward="true" selection-start-line="253" selection-start-column="8" selection-end-line="262" selection-end-column="14" />
+            <state relative-caret-position="697">
+              <caret line="80" column="27" lean-forward="true" selection-start-line="78" selection-start-column="19" selection-end-line="80" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/calc.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="598">
+              <caret line="69" column="110" lean-forward="true" selection-start-line="69" selection-start-column="110" selection-end-line="69" selection-end-column="110" />
+              <folding>
+                <element signature="e#2819#2823#0" expanded="true" />
+                <element signature="e#2829#2833#0" expanded="true" />
+                <element signature="e#2987#2991#0" expanded="true" />
+                <element signature="e#2997#3001#0" expanded="true" />
+                <element signature="e#3166#3170#0" expanded="true" />
+                <element signature="e#3179#3183#0" expanded="true" />
+                <element signature="e#3357#3361#0" expanded="true" />
+                <element signature="e#3370#3374#0" expanded="true" />
+                <element signature="e#3548#3552#0" expanded="true" />
+                <element signature="e#3561#3565#0" expanded="true" />
+                <element signature="e#3726#3730#0" expanded="true" />
+                <element signature="e#3754#3758#0" expanded="true" />
+                <element signature="e#3951#3955#0" expanded="true" />
+                <element signature="e#3964#3968#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -63,6 +94,8 @@
       <list>
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/pages/fonts.html" />
+        <option value="$PROJECT_DIR$/pages/calck.html" />
+        <option value="$PROJECT_DIR$/pages/calc.html" />
       </list>
     </option>
   </component>
@@ -103,6 +136,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -132,12 +166,20 @@
       <option name="presentableId" value="Default" />
       <updated>1558894608087</updated>
       <workItem from="1558894609214" duration="99000" />
-      <workItem from="1558894709200" duration="3108000" />
+      <workItem from="1558894709200" duration="5135000" />
     </task>
+    <task id="LOCAL-00001" summary="font page done">
+      <created>1558901470975</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1558901470975</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3207000" />
+    <option name="totallyTimeSpent" value="5234000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
@@ -165,18 +207,15 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="font page done" />
+    <option name="LAST_COMMIT_MESSAGE" value="font page done" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pages/mainPage.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="632">
           <caret line="47" column="17" lean-forward="true" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/animation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="601">
-          <caret line="262" column="14" lean-forward="true" selection-start-line="253" selection-start-column="8" selection-end-line="262" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -187,10 +226,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pages/calck.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/fonts.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="302" column="21" selection-start-line="302" selection-start-column="21" selection-end-line="302" selection-end-column="21" />
+        <state relative-caret-position="2366">
+          <caret line="334" column="57" lean-forward="true" selection-start-line="334" selection-start-column="57" selection-end-line="334" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/animation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="80" column="27" lean-forward="true" selection-start-line="78" selection-start-column="19" selection-end-line="80" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/calc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="69" column="110" lean-forward="true" selection-start-line="69" selection-start-column="110" selection-end-line="69" selection-end-column="110" />
+          <folding>
+            <element signature="e#2819#2823#0" expanded="true" />
+            <element signature="e#2829#2833#0" expanded="true" />
+            <element signature="e#2987#2991#0" expanded="true" />
+            <element signature="e#2997#3001#0" expanded="true" />
+            <element signature="e#3166#3170#0" expanded="true" />
+            <element signature="e#3179#3183#0" expanded="true" />
+            <element signature="e#3357#3361#0" expanded="true" />
+            <element signature="e#3370#3374#0" expanded="true" />
+            <element signature="e#3548#3552#0" expanded="true" />
+            <element signature="e#3561#3565#0" expanded="true" />
+            <element signature="e#3726#3730#0" expanded="true" />
+            <element signature="e#3754#3758#0" expanded="true" />
+            <element signature="e#3951#3955#0" expanded="true" />
+            <element signature="e#3964#3968#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

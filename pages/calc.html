@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+          crossorigin="anonymous"
+    >
+    <link href="../css/theme.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Animation</title>
+</head>
+<body>
+<div class="page">
+    <div id="menuShowButton" class="menu-show-button-visible" >
+        <div class="menu-show-button-wrapper">
+            <button class="show-menu-button" onclick="hideMenu()" >•••••</button>
+        </div>
+    </div>
+    <div class="mobile-menu">
+        <div class="mobile-menu-item"><a href="./mainPage.html">Главная</a></div>
+        <div class="mobile-menu-item"><a href="./animation.html">Анимация</a></div>
+        <div class="mobile-menu-item"><a href="./selectors.html">Селекторы</a></div>
+        <div class="mobile-menu-item"><a href="./gradient.html">Градиент</a></div>
+        <div class="mobile-menu-item"><a href="./fonts.html">Шрифты</a></div>
+        <div class="mobile-menu-item"><a href="./calc.html">Функция Calc()</a></div>
+        <div class="mobile-menu-item"><a href="./threed.html">3D Трансформация</a></div>
+        <div class="mobile-menu-close-button-wrapper">
+            <a class="close-mobile-menu-button" onclick="closeMobileMenu()" >CLOSE</a>
+        </div>
+    </div>
+    <div id="menu" class="menu">
+        <div class="menu-item menu-item-first-child"><a href="./mainPage.html">Главная</a></div>
+        <div class="menu-item"><a href="./animation.html">Анимация</a></div>
+        <div class="menu-item"><a href="./selectors.html">Селекторы</a></div>
+        <div class="menu-item"><a href="./gradient.html">Градиент</a></div>
+        <div class="menu-item"><a href="./fonts.html">Шрифты</a></div>
+        <div class="menu-item"><a href="./calc.html">Функция Calc()</a></div>
+        <div class="menu-item menu-item-last-child"><a href="./threed.html">3D Трансформация</a></div>
+        <!--<button onclick="hideMenu()" class="menu-button" id="menuHideButton">MENU</button>-->
+    </div>
+    <div class="content">
+        <div class="header-name-l1">Функция calc()</div>
+        <div class="text-block-animation">
+            calc() - это функция CSS, которая даёт возможность расчитать значения
+            свойств CSS во время их определения. Она может
+            быть использована везде, где применимы
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                &lt;length&gt;
+            </span>,
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                &lt;frequency&gt;
+            </span>,
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                &lt;frequency&gt;
+            </span>,
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                &lt;angle&gt;
+            </span>,
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                &lt;time&gt;
+            </span>,
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+               &lt;number&gt;
+            </span>,
+            или
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                &lt;integer&gt;
+            </span>
+        </div>
+        <div class="header-name-l2">Синтаксис</div>
+    </div>
+</div>
+</body>
+<script src="../js/rainbow-custom.min.js"></script>
+<script type="text/javascript" src="../js/script.js"></script>
+</html>
