@@ -1,13 +1,23 @@
 let prevScrollPossition = window.pageYOffset;
 let isMenuVisible = true;
-const menuHideButton = document.getElementById("menuHideButton");
-const menuShowButton = document.getElementById("menuShowButton")
-const menuBlock = document.getElementsByClassName("menu")[0];
-const viewportwidth = document.getElementsByTagName('body')[0].clientWidth;
-const mobileMenu = document.getElementsByClassName("mobile-menu")[0];
+let menuHideButton = document.getElementById("menuHideButton");
+let menuShowButton = document.getElementById("menuShowButton")
+let menuBlock = document.getElementsByClassName("menu")[0];
+let viewportwidth = document.getElementsByTagName('body')[0].clientWidth;
+let mobileMenu = document.getElementsByClassName("mobile-menu")[0];
 
 console.log(viewportwidth);
 
+
+document.addEventListener('DOMContentLoaded', function(){ // Аналог $(document).ready(function(){
+	prevScrollPossition = window.pageYOffset;
+	isMenuVisible = true;
+	menuHideButton = document.getElementById("menuHideButton");
+	menuShowButton = document.getElementById("menuShowButton")
+	menuBlock = document.getElementsByClassName("menu")[0];
+	viewportwidth = document.getElementsByTagName('body')[0].clientWidth;
+	mobileMenu = document.getElementsByClassName("mobile-menu")[0];
+});
 
 function closeMobileMenu() {
 	mobileMenu.classList.remove("mobile-menu-shown");
