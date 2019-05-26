@@ -10,13 +10,7 @@ console.log(viewportwidth);
 
 
 document.addEventListener('DOMContentLoaded', function(){ // Аналог $(document).ready(function(){
-	prevScrollPossition = window.pageYOffset;
-	isMenuVisible = true;
-	menuHideButton = document.getElementById("menuHideButton");
-	menuShowButton = document.getElementById("menuShowButton")
-	menuBlock = document.getElementsByClassName("menu")[0];
-	viewportwidth = document.getElementsByTagName('body')[0].clientWidth;
-	mobileMenu = document.getElementsByClassName("mobile-menu")[0];
+																													// Если должен быть найден один элемент
 });
 
 function closeMobileMenu() {
