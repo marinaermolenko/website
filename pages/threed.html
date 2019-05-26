@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+          crossorigin="anonymous"
+    >
+    <link href="../css/theme.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Animation</title>
+</head>
+<body>
+<div class="page">
+    <div id="menuShowButton" class="menu-show-button-visible" >
+        <div class="menu-show-button-wrapper">
+            <button class="show-menu-button" onclick="hideMenu()" >•••••</button>
+        </div>
+    </div>
+    <div class="mobile-menu">
+        <div class="mobile-menu-item"><a href="./mainPage.html">Главная</a></div>
+        <div class="mobile-menu-item"><a href="./animation.html">Анимация</a></div>
+        <div class="mobile-menu-item"><a href="./animation.html">Селекторы</a></div>
+        <div class="mobile-menu-item"><a href="./gradient.html">Градиент</a></div>
+        <div class="mobile-menu-item"><a href="./animation.html">Шрифты</a></div>
+        <div class="mobile-menu-item"><a href="./animation.html">Колонки</a></div>
+        <div class="mobile-menu-item"><a href="./animation.html">3D Трансформация</a></div>
+        <div class="mobile-menu-close-button-wrapper">
+            <a class="close-mobile-menu-button" onclick="closeMobileMenu()" >CLOSE</a>
+        </div>
+    </div>
+    <div id="menu" class="menu">
+        <div class="menu-item menu-item-first-child"><a href="./mainPage.html">Главная</a></div>
+        <div class="menu-item"><a href="./animation.html">Анимация</a></div>
+        <div class="menu-item"><a href="">Селекторы</a></div>
+        <div class="menu-item"><a href="">Градиент</a></div>
+        <div class="menu-item"><a href="">Шрифты</a></div>
+        <div class="menu-item"><a href="">Колонки</a></div>
+        <div class="menu-item menu-item-last-child"><a href="./threed.html">3D Трансформация</a></div>
+        <!--<button onclick="hideMenu()" class="menu-button" id="menuHideButton">MENU</button>-->
+    </div>
+    <div class="content">
+        <div class="header-name-l1">3D-трансформации</div>
+        <div class="text-block-animation">
+            CSS3 3D-трансформации создают объемные реалистичные эффекты на веб-страницах.
+            3D-трансформации работают аналогично с 2D-трансформациями с разницей в том,
+            что элементы могут перемещаться вдоль оси Z, вглубь экрана и из него.
+            Чтобы активизировать 3D-пространство, нужно установить свойство perspective для родительского контейнера.
+        </div>
+
+        <div class="header-name-l2">Установка 3D-перспективы perspective</div>
+        <div class="text-block-animation">
+            В нормальном потоке элементы отображаются плоскими и в той же плоскости,
+            что и блок, содержащий их. Двумерные функции преобразования могут изменять внешний вид элемента,
+            но этот элемент по-прежнему отображается в той же плоскости, что и содержащий его блок.
+            Свойства
+            <span style="color: #7b7b50; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                perspective
+            </span>
+             и
+            <span style="color: #7b7b50; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                perspective-origin
+            </span>
+            можно использовать для добавления ощущения глубины в сцену, делая элементы выше по оси Z
+            (ближе к зрителю) и кажущимися большими, а те, которые находятся дальше — меньшими. Масштаб
+            пропорционален d / (d - Z), где d — значение перспективы, является расстоянием
+            от плоскости рисования до предполагаемого положения глаза зрителя.
+            Если 3D-перспектива задается с помощью функции
+            <span style="color: #7b7b50; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                perspective()
+            </span>,
+            3D-пространство активизируется только для одного элемента. Свойство
+            <span style="color: #7b7b50; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                perspective
+            </span>
+            активирует
+            3D-пространство внутри элемента, содержащего дочерние трансформированные элементы и применяется
+            к ним. Свойство не наследуется.
+
+            <div class="header-name-l2">
+                <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                    perspective
+                </span>
+            </div>
+
+            <div class="selector-wrapper-0">
+                <div class="selector-name">длина</div>
+                <div class="selector-description">
+                    Задает глубину просмотра, т.е. расстояние по оси
+                    <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                        Z
+                    </span>
+                    . Значение может быть любым
+                    положительным числом. Если единица измерения не указана, по умолчанию она считается в
+                    <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                        px
+                    </span>
+                    .
+                    Чем больше значение, тем менее выражен эффект. 0 означает отсутствие перспективы.
+                </div>
+            </div>
+            <div class="selector-wrapper-1">
+                <div class="selector-name">none</div>
+                <div class="selector-description">
+                    Значение по умолчанию. Означает отсутствие перспективы.
+                </div>
+            </div>
+            <div class="selector-wrapper-0">
+                <div class="selector-name">initial</div>
+                <div class="selector-description">
+                    Устанавливает значение свойства в значение по умолчанию.
+                </div>
+            </div>
+            <div class="selector-wrapper-1">
+                <div class="selector-name">inherit</div>
+                <div class="selector-description">
+                    Наследует значение свойства от родительского элемента.
+                </div>
+            </div>
+        </div>
+        <div class="code-and-example">
+            <pre class="code-tool-with-example">
+              <code data-language="css">
+li {
+  transform: rotateX(50deg);
+}
+li:hover {
+  transform: perspective(900px) rotate3d(180,-45,0,-135deg);
+}
+
+                </code>
+            </pre>
+            <div class ="code-example">
+                <ul class="push">
+                    <li>3-D effect here without JavaScript.</li>
+                    <li>3-D effect here without JavaScript.</li>
+                    <li>3-D effect here without JavaScript.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="header-name-l2">Задание точки трансформации для 3D-элемента perspective-origin</div>
+        <div class="text-block-animation">
+            Свойство устанавливает точку начала координат для свойства
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+               perspective
+            </span>.
+            Значение по умолчанию
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+               perspective-origin: 50% 50%;
+            </span>.
+            Позволяет изменять направление трансформации
+            дочернего 3D-элемента. Свойство должно использоваться вместе со свойством perspective
+            для блока-контейнера и свойством
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+               transform
+            </span>
+            для дочернего элемента. Не наследуется.
+
+            <div class="header-name-l2">
+                <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                   perspective-origin
+                </span>
+            </div>
+
+            <div class="selector-wrapper-1">
+                <div class="selector-name">значение по оси X/значение по оси Y</div>
+                <div class="selector-description">
+                    Первое значение указывает положение элемента по оси X.
+                    Может задаваться в единицах длины, в
+                    <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                        %
+                    </span>
+                     или одним из трех ключевых слов:
+                    <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                        left
+                    </span>
+                    (эквивалентно 0% по оси X),
+                    <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                        center
+                    </span>
+                    (эквивалентно 50% по оси X)
+                    или
+                    <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                        right
+                    </span>
+                    (эквивалентно 100% по оси X).
+                    Второе значение указывает положение по оси Y. Задается в единицах длины,
+                    в
+                    <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                        %
+                    </span>
+                    или одним из трех ключевых слов:
+                    <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                        top
+                    </span>
+                    (эквивалентно 0% по оси Y),
+                    center (эквивалентно 50% по оси Y) или
+                    <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                        bottom
+                    </span>
+                    (эквивалентно 100% по оси Y).
+                </div>
+            </div>
+            <div class="selector-wrapper-0">
+                <div class="selector-name">initial</div>
+                <div class="selector-description">
+                    Устанавливает значение свойства в значение по умолчанию.
+                </div>
+            </div>
+            <div class="selector-wrapper-1">
+                <div class="selector-name">inherit</div>
+                <div class="selector-description">
+                    Наследует значение свойства от родительского элемента.
+                </div>
+            </div>
+        </div>
+        <pre class="code-tool code-tool-without-example">
+            <code data-language="css">
+          ul {
+                perspective: 150px;
+                perspective-origin: 10% 10%;
+            }
+          li {
+                transform: rotateX(50deg);
+            }
+            </code>
+        </pre>
+        <div class="header-name-l2">
+            Стиль 3D-преобразований transform-style
+        </div>
+        <div class="text-block-animation">
+            Свойство определяет, как дочерние трансформированные элементы
+            (элементы, для которых задано свойство
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+               transform
+            </span>
+            ) отрисовываются в трехмерном пространстве.
+            Задается для блока-контейнера. Не наследуется.
+
+            <div class="header-name-l2">
+                <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                   transform-style
+                </span>
+            </div>
+
+            <div class="selector-wrapper-1">
+                <div class="selector-name">flat</div>
+                <div class="selector-description">
+                    Значение по умолчанию. Все дочерние элементы отображаются
+                    плоскими в двумерной плоскости блока-контейнера.
+                </div>
+            </div>
+            <div class="selector-wrapper-0">
+                <div class="selector-name">preserve-3d</div>
+                <div class="selector-description">
+                    Располагает элементы в трехмерном пространстве.
+                </div>
+            </div>
+            <div class="selector-wrapper-1">
+                <div class="selector-name">initial</div>
+                <div class="selector-description">
+                    Устанавливает значение свойства в значение по умолчанию.
+                </div>
+            </div>
+            <div class="selector-wrapper-0">
+                <div class="selector-name">inherit</div>
+                <div class="selector-description">
+                    Наследует значение свойства от родительского элемента.
+                </div>
+            </div>
+        </div>
+        <div class="code-and-example">
+            <pre class="code-tool-with-example">
+              <code data-language="css">
+    ul {
+    perspective: 150px;
+    perspective-origin: 10% 10%;
+    }
+    li {
+    transform: rotateX(50deg);
+    }
+                </code>
+            </pre>
+            <div class ="code-example">
+                <ul styele="perspective: 150px; perspective-origin: 10% 10%">
+                    <li style="transform: rotateX(50deg)">3-D effect here without JavaScript.</li>
+                    <li style="transform: rotateX(50deg)">3-D effect here without JavaScript.</li>
+                    <li style="transform: rotateX(50deg)">3-D effect here without JavaScript.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="header-name-l2">
+            Видимость обратной стороны элемента backface-visibility
+        </div>
+        <div class="text-block-animation">
+            Свойство определяет, будет ли видна пользователю обратная сторона преобразованного элемента.
+            У непреобразованного элемента к пользователю обращена передняя сторона. Не наследуется.
+
+            <div class="header-name-l2">
+                <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                   backface-visibility
+                </span>
+            </div>
+
+            <div class="selector-wrapper-1">
+                <div class="selector-name">visible</div>
+                <div class="selector-description">
+                    Значение по умолчанию. Указывает, что обратная сторона видна.
+                </div>
+            </div>
+            <div class="selector-wrapper-0">
+                <div class="selector-name">hidden</div>
+                <div class="selector-description">
+                    Скрывает обратную сторону элемента.
+                </div>
+            </div>
+            <div class="selector-wrapper-1">
+                <div class="selector-name">initial</div>
+                <div class="selector-description">
+                    Устанавливает значение свойства в значение по умолчанию.
+                </div>
+            </div>
+            <div class="selector-wrapper-0">
+                <div class="selector-name">inherit</div>
+                <div class="selector-description">
+                    Наследует значение свойства от родительского элемента.
+                </div>
+            </div>
+        </div>
+
+
+    <pre class="code-tool code-tool-without-example">
+            <code data-language="html">
+          div {
+            backface-visibility: hidden;
+          }
+            </code>
+        </pre>
+    </div>
+</div>
+</body>
+<script src="../js/rainbow-custom.min.js"></script>
+<script type="text/javascript" src="../js/script.js"></script>
+</html>

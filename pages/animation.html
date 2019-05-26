@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+          crossorigin="anonymous"
+    >
+    <link href="../css/theme.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Animation</title>
+</head>
+<body>
+<div class="page">
+    <div id="menuShowButton" class="menu-show-button-visible" >
+        <div class="menu-show-button-wrapper">
+            <button class="show-menu-button" onclick="hideMenu()" >•••••</button>
+        </div>
+    </div>
+    <div class="mobile-menu">
+        <div class="mobile-menu-item"><a href="./mainPage.html">Главная</a></div>
+        <div class="mobile-menu-item"><a href="./animation.html">Анимация</a></div>
+        <div class="mobile-menu-item"><a href="./animation.html">Селекторы</a></div>
+        <div class="mobile-menu-item"><a href="./gradient.html">Градиент</a></div>
+        <div class="mobile-menu-item"><a href="./fonts.html">Шрифты</a></div>
+        <div class="mobile-menu-item"><a href="./animation.html">Колонки</a></div>
+        <div class="mobile-menu-item"><a href="./threed.html">3D Трансформация</a></div>
+        <div class="mobile-menu-close-button-wrapper">
+            <a class="close-mobile-menu-button" onclick="closeMobileMenu()" >CLOSE</a>
+        </div>
+    </div>
+    <div id="menu" class="menu">
+        <div class="menu-item menu-item-first-child"><a href="./mainPage.html">Главная</a></div>
+        <div class="menu-item"><a href="./animation.html">Анимация</a></div>
+        <div class="menu-item"><a href="">Селекторы</a></div>
+        <div class="menu-item"><a href="./gradient.html">Градиент</a></div>
+        <div class="menu-item"><a href="./fonts.html">Шрифты</a></div>
+        <div class="menu-item"><a href="">Колонки</a></div>
+        <div class="menu-item menu-item-last-child"><a href="./threed.html">3D Трансформация</a></div>
+        <!--<button onclick="hideMenu()" class="menu-button" id="menuHideButton">MENU</button>-->
+    </div>
+    <div class="content">
+        <div class="header-name-l1">Анимация</div>
+        <div class="text-block-animation">
+            CSS анимации позволяют анимировать переходы от одних конфигурации CSS стилей к другим.
+            CSS-анимации состоят из двух компонентов: стилевое описание анимации и набор ключевых кадров,
+            определяющих начальное, конечное и, возможно, промежуточное состояние анимируемых стилей.
+            Есть три преимущества CSS-анимации перед традиционными способами:
+            <ul class="push">
+                <li>Простота использования для простых анимации; Вы можете создать анимацию не зная JavaScript.</li>
+                <li>Анимации будут хорошо работать даже при умеренных нагрузках системы.
+                    Простые анимации на JavaScript, если они плохо написаны, часто выполняются плохо.
+                    Движок может использовать frame-skipping и другие техники чтобы сохранить производительность на таком высоком уровне .
+                </li>
+                <li>Позволяет браузеру контролировать последовательность анимации, тем самым оптимизируя производительность и
+                    эффективность браузера. Например, уменьшая частоту обновления кадров анимации в непросматриваемых в данный
+                    момент вкладках.
+                </li>
+            </ul>
+        </div>
+
+        <div class="header-name-l2">Конфигурирование анимации</div>
+        <div class="text-block-animation">
+            Чтобы создать CSS-анимацию Вы должны добавить в стиль элемента, который хотите анимировать,
+            свойство animation или его подсвойства.  Это позволит Вам настроить ускорение и продолжительность
+            анимации, а также другие детали того, как анимация должна протекать.
+
+            <div>
+                Свойство <span style="color: #7b7b50; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">animation</span>
+                имеет следующие подсвойства:
+            </div>
+            <div class="selector-wrapper-0">
+                <div class="selector-name">animation-name</div>
+                <div class="selector-description">
+                    Определяет имя
+                    <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                        @keyframes
+                    </span>,
+                    настраивающего кадры анимации.
+                </div>
+            </div>
+            <div class="selector-wrapper-1">
+                <div class="selector-name">animation-duration</div>
+                <div class="selector-description">
+                    Определяет время, в течение которого должен пройти один цикл анимации.
+                </div>
+            </div>
+            <div class="selector-wrapper-0">
+                <div class="selector-name">animation-timing-function</div>
+                <div class="selector-description">
+                    Настраивает ускорение анимации.
+                </div>
+            </div>
+            <div class="selector-wrapper-1">
+                <div class="selector-name">animation-delay</div>
+                <div class="selector-description">
+                    Настраивает задержку между временем загрузки элемента и временем начала анимации.
+                </div>
+            </div>
+            <div class="selector-wrapper-0">
+                <div class="selector-name">animation-iteration-count</div>
+                <div class="selector-description">
+                    Определяет количество повторении анимации; Вы можете использовать значение
+                    <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                        infinite
+                    </span> для бесконечного повторения анимации.
+                </div>
+            </div>
+            <div class="selector-wrapper-1">
+                <div class="selector-name">animation-direction</div>
+                <div class="selector-description">
+                    Дает возможность при каждом повторе анимации идти по альтернативному пути,
+                    либо сбросить все значения и повторить анимацию.
+                </div>
+            </div>
+            <div class="selector-wrapper-0">
+                <div class="selector-name">animation-fill-mode</div>
+                <div class="selector-description">
+                    Настраивает значения, используемые анимацией, до и после исполнения.
+                </div>
+            </div>
+            <div class="selector-wrapper-1">
+                <div class="selector-name">animation-play-state</div>
+                <div class="selector-description">
+                    Позволяет Вам приостановить и возобновить анимацию.
+                </div>
+            </div>
+        </div>
+        <div class="header-name-l2">
+            Определение последовательности анимации <br>
+            с помощью ключевых кадров
+        </div>
+        <div class="text-block-animation">
+            После того, как вы настроили временные свойства
+            (продолжительность, ускорение) анимации, вы должны определить внешний вид
+            анимации. Это делается с помощью двух и более ключевых кадров после
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+               @keyframes.
+            </span>
+            Каждый кадр описывает, как должен выглядеть анимированный элемент в текущий момент.
+            В то время как временные  характеристики (продолжительность анимации) указываются в
+            стилях для анимируемого элемента, ключевые кадры используют
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+               percentage,
+            </span>
+             чтобы определить
+            стадию протекания анимации. 0% означает начало анимации, а 100% ее конец.
+            Так как эти значения очень важны, то для них придумали специальные слова:
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+               from
+            </span>
+             и
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+               to.
+            </span>
+        </div>
+
+        <div class="header-name-l2">
+            Примеры
+        </div>
+
+        <div class="text-block-animation">
+             <span style="font-size: 2vw">Скольжение текста</span> <br>
+            Этот простой пример анимирует скольжение текста в элементе
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+               &lt;p&gt;
+            </span> от правого края окна браузера.
+            Обратите внимание  на то, что анимация может сделать страницу шире чем окно браузера.
+            Этого можно избежать, поместив элемент, который будет анимироваться, в контейнер и установив ему свойство
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+               overflow:hidden
+            </span>.
+        </div>
+
+        <div class="code-and-example">
+            <pre class="code-tool-with-example">
+              <code data-language="css">
+        p {
+            animation-duration: 3s;
+            animation-name: slidein;
+        }
+
+        @keyframes slidein {
+          from {
+            margin-left: 100%;
+            width: 300%;
+          }
+
+          to {
+            margin-left: 0%;
+            width: 100%;
+          }
+        }
+                </code>
+            </pre>
+            <div class ="code-example">
+                <p class="animation-example">
+                    The Caterpillar and Alice looked
+                </p>
+            </div>
+        </div>
+
+        <div class="text-block-animation">
+            В стиле для элемента
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+               &lt;p&gt;
+            </span>
+            с помощью свойства animation-durationуказано,
+            что исполнение анимации от начала до конца должно занять 3 с , и что имя для
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+               @keyframes
+            </span>, описывающей саму анимацию, определено как "
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+               slidein
+            </span>
+            ".
+            В элемент
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+               &lt;p&gt;
+            </span>
+            можно добавлять и другие пользовательские стили,
+            чтобы как-то украсить его, однако здесь мы хотели продемонстрировать только эффект анимации.
+            Kлючевые кадры определяются с помощью правила
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+               @keyframes
+            </span>.
+            В данном случае мы имеем только два ключевых кадра.
+            Первый при 0% анимации (
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+               from
+            </span>
+            )
+            . Здесь мы придаем элементу левый отступ в 100% и ширину в 300%
+            (в три раза больше ширины родительского элемента). Это становится причиной того, что при первом кадре
+            анимации заголовок
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+               &lt;p&gt;
+            </span>
+            находится за пределами правого края окна браузера .
+            Второй ключевой кадр (
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+               to
+            </span>
+            ) определяет конец анимации, т.е (100%). Левый отступ устанавливается равным 0,
+            а ширина 100%. Все выглядит будто заголовок
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+               &lt;p&gt;
+            </span>
+            приплывает к левому краю окна браузера.
+        </div>
+        <pre class="code-tool code-tool-without-example">
+            <code data-language="html">
+           <p>
+               The Caterpillar and Alice looked at each other for some time in silence:
+               at last the Caterpillar took the hookah out of its mouth, and addressed
+               her in a languid, sleepy voice.
+           </p>
+
+            </code>
+        </pre>
+    </div>
+</div>
+</body>
+<script src="../js/rainbow-custom.min.js"></script>
+<script type="text/javascript" src="../js/script.js"></script>
+</html>
