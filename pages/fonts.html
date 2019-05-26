@@ -1,10 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+          crossorigin="anonymous"
+    >
+    <link href="../css/theme.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Animation</title>
 </head>
 <body>
-
+<div class="page">
+    <div id="menuShowButton" class="menu-show-button-visible" >
+        <div class="menu-show-button-wrapper">
+            <button class="show-menu-button" onclick="hideMenu()" >•••••</button>
+        </div>
+    </div>
+    <div class="mobile-menu">
+        <div class="mobile-menu-item"><a href="./mainPage.html">Главная</a></div>
+        <div class="mobile-menu-item"><a href="./animation.html">Анимация</a></div>
+        <div class="mobile-menu-item"><a href="./selectors.html">Селекторы</a></div>
+        <div class="mobile-menu-item"><a href="./gradient.html">Градиент</a></div>
+        <div class="mobile-menu-item"><a href="./fonts.html">Шрифты</a></div>
+        <div class="mobile-menu-item"><a href="./calc.html">Функция Calc()</a></div>
+        <div class="mobile-menu-item"><a href="./threed.html">3D Трансформация</a></div>
+        <div class="mobile-menu-close-button-wrapper">
+            <a class="close-mobile-menu-button" onclick="closeMobileMenu()" >CLOSE</a>
+        </div>
+    </div>
+    <div id="menu" class="menu">
+        <div class="menu-item menu-item-first-child"><a href="./mainPage.html">Главная</a></div>
+        <div class="menu-item"><a href="./animation.html">Анимация</a></div>
+        <div class="menu-item"><a href="./selectors.html">Селекторы</a></div>
+        <div class="menu-item"><a href="./gradient.html">Градиент</a></div>
+        <div class="menu-item"><a href="./fonts.html">Шрифты</a></div>
+        <div class="menu-item"><a href="./calc.html">Функция Calc()</a></div>
+        <div class="menu-item menu-item-last-child"><a href="./threed.html">3D Трансформация</a></div>
+        <!--<button onclick="hideMenu()" class="menu-button" id="menuHideButton">MENU</button>-->
+    </div>
+    <div class="content">
+        <div class="header-name-l1">CSS3 – шрифты</div>
+        <div class="text-block-animation">
+            Шрифты играют огромную роль в создании общего впечатления о документе.
+            В зависимости от используемого шрифта, одно и то же содержимое может
+            восприниматься как строго профессиональное, причудливое, старомодное
+            или сверхсовременное.
+            Разработчики браузеров не спешат реализовывать специальные веб-шрифты по
+            объективным причинам. Прежде всего, это вопросы оптимизации, т.к.
+            разрешение экранов намного хуже разрешения печатных документов.
+            Если веб-шрифт не настроить должным образом для отображения на экране
+            монитора, буквы маленького размера будут сливаться в одну расплывчатую
+            линию. Кроме этого, в большинстве шрифты платные.
+            В
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                CSS3
+            </span>
+            CSS3 поддержка сложных шрифтов обеспечивается посредством возможности
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+              @font-face
+            </span>, которая применяется следующим образом:
+            <ul class="push">
+                <li>Требуемый шрифт (или, более вероятно, несколько версий шрифта для поддержки разных браузеров)
+                    загружается на сайт.
+                </li>
+                <li>
+                    Каждый шрифт регистрируется в таблице стилей с помощью команды
+                    <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                        @font-face
+                    </span>.
+                </li>
+                <li>
+                    Зарегистрированный шрифт используется в правилах стиля указанием его названия,
+                    точно так же, как и обычные веб-шрифты.
+                </li>
+                <li>
+                    Когда браузер обнаруживает таблицу стилей,
+                    в которой используется специальный веб-шрифт, он загружает этот шрифт с сервера
+                    в свой кэш для временного хранения страниц и изображений. После этого браузер использует
+                    этот шрифт только для данной страницы или сайта. Если этот же шрифт указывается
+                    в другой странице, он должен быть зарегистрирован на этой странице и загружен на ее сервер,
+                    откуда он может быть загружен браузером в свой кэш.
+                </li>
+            </ul>
+        </div>
+        <div class="header-name-l2">Форматы веб-шрифтов</div>
+        <div class="text-block-animation">
+            Хотя все современные браузеры поддерживают возможность
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                @font-face
+            </span>,
+            не все они поддерживают одинаковые типы файлов шрифтов. Например,
+            Internet Explorer, который обеспечивает использование
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                @font-face
+            </span>
+            в течение многих лет, поддерживает только файлы типа EOT (Embedded OpenType).
+            Этот формат предоставляет ряд преимуществ, например, в нем используется
+            сжатие для уменьшения объема файла шрифтов, а также применяется строгое
+            лицензирование для веб-сайтов, чтобы шрифт нельзя было украсть
+            с одного сайта и использовать на другом.
+        </div>
+        <div class="text-block-animation">
+            Но формат EOT никогда ни пользовался большой популярностью и не используется никакими другими браузерами.
+            Вместо него браузеры работают с более знакомыми стандартами шрифтов, применяемыми
+            в компьютерных приложениях — TTF (TrueType) и OTF (OpenType PostScript).
+            Кроме этого, существуют еще два типа отображения шрифтов — SVG и WOFF.
+            В таблице ниже дано краткое описание всех этих форматов шрифтов.
+            <div class="selector-wrapper-1">
+                <div class="selector-name">
+                    TTF (TrueType),
+                    OTF (OpenType PostScript)
+                </div>
+                <div class="selector-description">
+                    Распространенные форматы шрифтов настольных компьютеров
+                </div>
+            </div>
+            <div class="selector-wrapper-0">
+                <div class="selector-name">EOT (Embedded OpenType)</div>
+                <div class="selector-description">
+                    Формат, специфичный для продуктов корпорации Microsoft.
+                    Не завоевал популярности у браузеров, за исключением Internet Explorer
+                </div>
+            </div>
+            <div class="selector-wrapper-1">
+                <div class="selector-name">
+                    SVG (Scalable Vector Graphics)
+                </div>
+                <div class="selector-description">
+                    Универсальный графический формат, который можно использовать
+                    для создания шрифтов. Дает хорошие, но не отличные результаты
+                    — медленно отображается и демонстрирует текст пониженного качества
+                </div>
+            </div>
+            <div class="selector-wrapper-0">
+                <div class="selector-name">WOFF (Web Open Font Format)</div>
+                <div class="selector-description">
+                    Возможно, единый формат шрифтов будущего. Поддерживается новыми версиями браузеров
+                </div>
+            </div>
+        </div>
+        <div class="header-name-l2">Наборы шрифтов</div>
+        <div class="text-block-animation">
+            Взять разные файлы шрифтов, которые могут вам потребоваться легче всего будет загрузить
+            готовый набор шрифтов из Интернета, получив, таким образом, все требуемые файлы шрифтов.
+            Недостаток этого подхода состоит в том, что ваш выбор ограничивается тем, что вы сможете
+            найти в глобальной сети. Чтобы помочь вам в поиске наборов веб-шрифтов, можно
+            порекомендовать воспользоваться одним из лучших сайтов шрифтов — Font Squirrel.
+            На рисунке ниже показано несколько шрифтов из предоставляемых на этом сайте наборов:
+        </div>
+        <div>
+            <img style="max-width: 100%" src="../images/fonts.jpg" alt="">
+        </div>
+        <div class="text-block-animation">
+            Сайт Font Squirrel предоставляет для загрузки несколько сотен высококачественных шрифтов,
+            организованных в разделы по категориям (такие как, например, Calligraphic, Grunge или Retro).
+            Но самое приятное, что все эти шрифты бесплатные для любого использования, будь то
+            на персональном компьютере для создания документов или на веб-странице в Интернете.
+        </div>
+        <div class="text-block-animation">
+            Набор шрифтов загрузится в виде файла, сжатого в формате ZIP, который содержит несколько
+            файлов шрифта в разных форматах. Чтобы использовать шрифт в своей веб-странице, файлы
+            разных форматов шрифта нужно загрузить на веб-сервер в папку этой веб-страницы.
+            После этого шрифт нужно зарегистрировать, чтобы он был доступным для использования в таблице стилей.
+            Регистрация выполняется с помощью сложного правила
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                @font-face
+            </span> в
+            начале таблицы стилей, которое выглядит следующим образом
+        </div>
+        <pre class="code-tool code-tool-without-example">
+            <code data-language="css">
+          @font-face {
+                font-family: 'MetrophobicRegular';
+                src: url('Metrophobic-webfont.eot');
+                src: local('Metrophobic'),
+                     url('Metrophobic-webfont.eot?#iefix') format('embedded-opentype'),
+                     url('Metrophobic-webfont.woff') format('woff'),
+                     url('Metrophobic-webfont.ttf') format('truetype'),
+                     url('Metrophobic-webfont.svg#MetrophobicRegular') format('svg');
+                font-weight: normal;
+                font-style: normal;
+           }
+            </code>
+        </pre>
+        <div class="text-block-animation">
+            Строки приведенного кода выполняют следующие функции:
+            <ul class="push">
+                <li>
+                    Выражение
+                    <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                        @font-face
+                    </span>
+                    регистрирует шрифт для его дальнейшего применения в таблице стилей.
+                </li>
+                <li>
+                    Шрифту можно присвоить любое название. Это название будет употреблено позже, при использовании шрифта.
+                </li>
+                <li>
+                    Первым должен быть указан формат EOT, т.к. дальнейшая часть правила сбивает с толку
+                    Internet Explorer, и тот не обращает внимания на остальные форматы. Функция таблицы стилей url()
+                    указывает браузеру загрузить файл из обозначенного URL. Если шрифт размещен в одной папке с
+                    веб-страницей, то здесь можно просто указать название файла.
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
 </body>
+<script src="../js/rainbow-custom.min.js"></script>
+<script type="text/javascript" src="../js/script.js"></script>
 </html>

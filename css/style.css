@@ -62,7 +62,7 @@ body {
     content: "";
     left: 0;
     transition: .3s ease-in-out;
-    top: 27px;
+    top: 36px;
 }
 
 .push li:after {
