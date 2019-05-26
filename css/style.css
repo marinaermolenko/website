@@ -84,6 +84,28 @@ body {
     transition: 1s;
 }
 
+
+@-webkit-keyframes gradient {
+    0%{background-position:0% 70%}
+    50%{background-position:100% 31%}
+    100%{background-position:0% 70%}
+}
+@-moz-keyframes gradient {
+    0%{background-position:0% 70%}
+    50%{background-position:100% 31%}
+    100%{background-position:0% 70%}
+}
+@-o-keyframes gradient {
+    0%{background-position:0% 70%}
+    50%{background-position:100% 31%}
+    100%{background-position:0% 70%}
+}
+@keyframes gradient {
+    0%{background-position:0% 70%}
+    50%{background-position:100% 31%}
+    100%{background-position:0% 70%}
+}
+
 .push {
     list-style: none;
     font-family: 'Alegreya', serif;

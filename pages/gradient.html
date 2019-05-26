@@ -23,10 +23,10 @@
     <div class="mobile-menu">
         <div class="mobile-menu-item"><a href="./mainPage.html">Главная</a></div>
         <div class="mobile-menu-item"><a href="./animation.html">Анимация</a></div>
-        <div class="mobile-menu-item"><a href="./animation.html">Селекторы</a></div>
+        <div class="mobile-menu-item"><a href="./selectors.html">Селекторы</a></div>
         <div class="mobile-menu-item"><a href="./gradient.html">Градиент</a></div>
         <div class="mobile-menu-item"><a href="./fonts.html">Шрифты</a></div>
-        <div class="mobile-menu-item"><a href="./animation.html">Колонки</a></div>
+        <div class="mobile-menu-item"><a href="./calc.html">Функция Calc()</a></div>
         <div class="mobile-menu-item"><a href="./threed.html">3D Трансформация</a></div>
         <div class="mobile-menu-close-button-wrapper">
             <a class="close-mobile-menu-button" onclick="closeMobileMenu()" >CLOSE</a>
@@ -35,10 +35,10 @@
     <div id="menu" class="menu">
         <div class="menu-item menu-item-first-child"><a href="./mainPage.html">Главная</a></div>
         <div class="menu-item"><a href="./animation.html">Анимация</a></div>
-        <div class="menu-item"><a href="">Селекторы</a></div>
+        <div class="menu-item"><a href="./selectors.html">Селекторы</a></div>
         <div class="menu-item"><a href="./gradient.html">Градиент</a></div>
         <div class="menu-item"><a href="./fonts.html">Шрифты</a></div>
-        <div class="menu-item"><a href="">Колонки</a></div>
+        <div class="menu-item"><a href="./calc.html">Функция Calc()</a></div>
         <div class="menu-item menu-item-last-child"><a href="./threed.html">3D Трансформация</a></div>
         <!--<button onclick="hideMenu()" class="menu-button" id="menuHideButton">MENU</button>-->
     </div>
@@ -209,12 +209,19 @@ div {
               <code data-language="css">
 div {
     height: 200px;
-    background: radial-gradient(40% 50%, #FAECD5, #CAE4D8);
+    background: linear-gradient(37deg, #f25656, #18258c, #8c1864);
+    background-size: 600% 600%;
+    animation: gradient 1s ease infinite;
 }
                 </code>
             </pre>
             <div class ="code-example">
-                <div style="height: 200px;  background: radial-gradient(40% 50%, #FAECD5, #CAE4D8)"></div>
+                <div style="
+                height: 200px;
+background: linear-gradient(37deg, #f25656, #18258c, #8c1864);
+background-size: 600% 600%;
+animation: gradient 1s ease infinite;
+"></div>
             </div>
         </div>
 
@@ -286,7 +293,51 @@ div {
                 </div>
             </div>
         </div>
-        <div cls></div>
+        <div class="header-name-l2">Повтор градиента</div>
+        <div class="text-block-animation">
+            В добавление к линейному и радиальному градиентам существует повтор градиента,
+            который задается с помощью функций
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                repeating-linear-gradient()
+            </span>
+            и
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                repeating-radial-gradient()
+            </span>
+            соответственно. Фон из повторяющихся градиентов
+            выглядит неаккуратно, поэтому рекомендуется начинать следующий
+            цвет с точки остановки предыдущего, создавая таким образом полосатые узоры.
+        </div>
+        <div class="code-and-example">
+            <pre class="code-tool-with-example">
+              <code data-language="css">
+div {
+    height: 200px;
+    background: repeating-linear-gradient(45deg, #606dbc, #606dbc 10px, #465298 10px, #465298 20px);
+}
+                </code>
+            </pre>
+            <div class ="code-example">
+                <div style="height: 200px;
+                 background: repeating-linear-gradient(45deg, #606dbc, #606dbc 10px, #465298 10px, #465298 20px)">
+                </div>
+            </div>
+        </div>
+        <div class="code-and-example">
+            <pre class="code-tool-with-example">
+              <code data-language="css">
+div {
+    height: 200px;
+    background: repeating-radial-gradient(circle, #B9ECFE, #B9ECFE 10px, #82DDFF 10px, #82DDFF 20px);
+}
+                </code>
+            </pre>
+            <div class ="code-example">
+                <div style="height: 200px;
+                background: repeating-radial-gradient(circle, #B9ECFE, #B9ECFE 10px, #82DDFF 10px, #82DDFF 20px);">
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 </body>
