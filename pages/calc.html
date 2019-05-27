@@ -178,6 +178,52 @@
             </div>
         </div>
 
+        <div class="header-name-l2">
+            Автоматическое изменение размера формы ввода для соответствия размеру контейнера
+        </div>
+        <div class="text-block-animation">
+            В следующем случае
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                 calc()
+            </span>
+            помогает обеспечить не выпадание
+            полей формы за края блока, задав отступ.
+            Давайте посмотрим некоторый код CSS:
+        </div>
+        <pre class="code-tool code-tool-without-example">
+            <code data-language="css">
+            input {
+              padding: 2px;
+              display: block;
+              width: 98%;
+              width: calc(100% - 1em);
+            }
+
+            #formbox {
+              width: 130px;
+              width: calc(100% / 6);
+              border: 1px solid black;
+              padding: 4px;
+            }
+            </code>
+        </pre>
+        <div class="text-block-animation">
+            Здесь ширина формы становится 1/6 от ширины окна. Затем, чтобы задать  размер
+            полей, мы вновь используем функцию
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                 calc()
+            </span>, которая вычитает 1em из ширины блока. Теперь применим этот CSS к следущему HTML-коду:
+        </div>
+        <pre class="code-tool code-tool-without-example">
+            <code data-language="html">
+            <form>
+              <div id="formbox">
+              <label>Type something:</label>
+              <input type="text">
+              </div>
+            </form>
+            </code>
+        </pre>
     </div>
 </div>
 </body>
