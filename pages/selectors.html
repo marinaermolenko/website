@@ -1,10 +1,534 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+          crossorigin="anonymous"
+    >
+    <link href="../css/theme.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Animation</title>
 </head>
 <body>
+<div class="page">
+    <div id="menuShowButton" class="menu-show-button-visible" >
+        <div class="menu-show-button-wrapper">
+            <button class="show-menu-button" onclick="hideMenu()" >•••••</button>
+        </div>
+    </div>
+    <div class="mobile-menu">
+        <div class="mobile-menu-item"><a href="./mainPage.html">Главная</a></div>
+        <div class="mobile-menu-item"><a href="./animation.html">Анимация</a></div>
+        <div class="mobile-menu-item"><a href="./selectors.html">Селекторы</a></div>
+        <div class="mobile-menu-item"><a href="./gradient.html">Градиент</a></div>
+        <div class="mobile-menu-item"><a href="./fonts.html">Шрифты</a></div>
+        <div class="mobile-menu-item"><a href="./calc.html">Функция Calc()</a></div>
+        <div class="mobile-menu-item"><a href="./threed.html">3D Трансформация</a></div>
+        <div class="mobile-menu-close-button-wrapper">
+            <a class="close-mobile-menu-button" onclick="closeMobileMenu()" >CLOSE</a>
+        </div>
+    </div>
+    <div id="menu" class="menu">
+        <div class="menu-item menu-item-first-child"><a href="./mainPage.html">Главная</a></div>
+        <div class="menu-item"><a href="./animation.html">Анимация</a></div>
+        <div class="menu-item"><a href="./selectors.html">Селекторы</a></div>
+        <div class="menu-item"><a href="./gradient.html">Градиент</a></div>
+        <div class="menu-item"><a href="./fonts.html">Шрифты</a></div>
+        <div class="menu-item"><a href="./calc.html">Функция Calc()</a></div>
+        <div class="menu-item menu-item-last-child"><a href="./threed.html">3D Трансформация</a></div>
+        <!--<button onclick="hideMenu()" class="menu-button" id="menuHideButton">MENU</button>-->
+    </div>
+    <div class="content">
+        <div class="header-name-l1">ВИДЫ СЕЛЕКТОРОВ</div>
+        <div class="text-block-animation">
+            Селекторы представляют структуру веб-страницы. С их помощью
+            создаются правила для форматирования элементов веб-страницы.
+            Селекторами могут быть элементы, их классы и идентификаторы,
+            а также псевдоклассы и псевдоэлементы.
+        </div>
+        <div class="header-name-l2">Универсальный селектор</div>
+        <div class="text-block-animation">
+            Соответствует любому HTML-элементу. Например, *
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+               {margin: 0;}
+            </span>
+            обнулит внешние отступы для всех элементов сайта. Также селектор
+            может использоваться в комбинации с псевдоклассом или псевдоэлементом:
+            *
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+               :after {CSS-стили}
+            </span>, *
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+               :checked {CSS-стили}
+            </span>.
+        </div>
+        <div class="header-name-l2">Селектор элемента</div>
+        <div class="text-block-animation">
+            Селекторы элементов позволяют форматировать все элементы данного типа
+            на всех страницах сайта. Например,
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+               h1 {font-family: Lobster, cursive;}
+            </span> задаст общий стиль форматирования всех заголовков
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+               h1
+            </span>.
+        </div>
+        <div class="header-name-l2">Селектор класса</div>
+        <div class="text-block-animation">
+            Селекторы класса позволяют задавать стили для одного и более элементов с
+            одинаковым именем класса, размещенных в разных местах страницы или на разных
+            страницах сайта. Например, для создания заголовка с классом
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+               headline
+            </span> необходимо добавить атрибут
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+               class
+            </span> со значением
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+               headline
+            </span> в открывающий тег
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+              &lt;h1&gt;
+            </span>
+            и задать стиль для указанного класса. Стили, созданные
+            с помощью класса, можно применять к другим элементам, не обязательно данного типа.
+        </div>
+        <pre class="code-tool code-tool-without-example">
+            <code data-language="html">
+                <h1 class="headline">Инструкция пользования персональным компьютером</h1>
+            </code>
+        </pre>
+        <pre class="code-tool code-tool-without-example">
+            <code data-language="css">
+               .headline {
+                  text-transform: uppercase;
+                  color: lightblue;
+               }
+            </code>
+        </pre>
+        <div class="header-name-l2">Селектор потомка</div>
+        <div class="text-block-animation">
+            Селекторы потомков применяют стили к элементам, расположенным внутри элемента-контейнера.
+            Например,
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                ul li {text-transform: uppercase;}
+            </span> — выберет все элементы
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                li
+            </span>, являющиеся потомками всех элементов
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                ul
+            </span>.
+            Если нужно отформатировать потомки определенного элемента,
+            этому элементу нужно задать стилевой класс:
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                 p.first a {color: green;}
+            </span>
+            — данный стиль применится ко всем ссылкам, потомкам абзаца с классом first;
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                 p .first a {color: green;}
+            </span>
+            — если добавить пробел, то будут стилизованы ссылки, расположенные внутри
+            любого тега класса
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                 .first
+            </span>, который является потомком элемента
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+              &lt;p&gt;
+            </span>;
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+              .first a {color: green;}
+            </span> — данный стиль применится к любой ссылке, расположенной внутри другого
+            элемента, обозначенного классом
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+               .first
+            </span>.
+        </div>
+        <div class="header-name-l2">Дочерний селектор</div>
+        <div class="text-block-animation">
+            Дочерний элемент является прямым потомком содержащего его элемента.
+            У одного элемента может быть несколько дочерних элементов, а родительский
+            элемент у каждого элемента может быть только один. Дочерний селектор позволяет
+            применить стили только если дочерний элемент идёт сразу за родительским
+            элементом и между ними нет других элементов, то есть дочерний элемент больше ни во что не вложен.
+            Например,
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+               p > strong
+            </span>
+             — выберет все элементы
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+              strong
+            </span>, являющиеся дочерними по отношению к элементу
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+              p
+            </span>.
+        </div>
+        <div class="header-name-l2">Сестринский селектор</div>
+        <div class="text-block-animation">
+            Сестринские отношения возникают между элементами, имеющими общего родителя.
+            Селекторы сестринских элементов позволяют выбрать элементы из группы элементов одного уровня.
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+               h1 + p
+            </span>
+             — выберет все первые абзацы, идущие непосредственно за любым тегом
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+              &lt;h1&gt;
+            </span>
+            , не затрагивая остальные абзацы;
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+              h1 ~ p
+            </span>
+             — выберет все абзацы, являющиеся сестринскими по отношению
+            к любому заголовку
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+              h1
+            </span> и идущие сразу после него.
+        </div>
+        <div class="header-name-l2">Селектор псевдокласса</div>
+        <div class="text-block-animation">
+            Псевдоклассы — это классы, фактически не прикрепленные к HTML-тегам.
+            Они позволяют применить CSS-правила к элементам при
+            совершении события или подчиняющимся определенному правилу.
+            Псевдоклассы характеризуют элементы со следующими свойствами:
+            <div class="selector-wrapper-1">
+                <div class="selector-name">
+                    :link
+                </div>
+                <div class="selector-description">
+                    не посещенная ссылка
+                </div>
+            </div>
+            <div class="selector-wrapper-0">
+                <div class="selector-name">:visited</div>
+                <div class="selector-description">
+                    посещенная ссылка
+                </div>
+            </div>
+            <div class="selector-wrapper-1">
+                <div class="selector-name">
+                    :hover
+                </div>
+                <div class="selector-description">
+                    любой элемент, по которому проводят курсором мыши
+                </div>
+            </div>
+            <div class="selector-wrapper-0">
+                <div class="selector-name">:focus</div>
+                <div class="selector-description">
+                    интерактивный элемент, к которому перешли с помощью клавиатуры или активировали посредством мыши
+                </div>
+            </div>
+            <div class="selector-wrapper-1">
+                <div class="selector-name">
+                    :active
+                </div>
+                <div class="selector-description">
+                    элемент, который был активизирован пользователем
+                </div>
+            </div>
+            <div class="selector-wrapper-0">
+                <div class="selector-name">:valid</div>
+                <div class="selector-description">
+                    поля формы, содержимое которых прошло проверку в браузере на соответствие указанному типу данных
+                </div>
+            </div>
+            <div class="selector-wrapper-1">
+                <div class="selector-name">
+                    :invalid
+                </div>
+                <div class="selector-description">
+                    поля формы, содержимое которых не соответствует указанному типу данных
+                </div>
+            </div>
+            <div class="selector-wrapper-0">
+                <div class="selector-name">:enabled</div>
+                <div class="selector-description">
+                    все активные поля форм
+                </div>
+            </div>
+            <div class="selector-wrapper-1">
+                <div class="selector-name">
+                    :disabled
+                </div>
+                <div class="selector-description">
+                    заблокированные поля форм, т.е., находящиеся в неактивном
+                </div>
+            </div>
+            <div class="selector-wrapper-0">
+                <div class="selector-name">
+                    :in-range
+                </div>
+                <div class="selector-description">
+                    поля формы, значения которых находятся в заданном
+                </div>
+            </div>
+            <div class="selector-wrapper-1">
+                <div class="selector-name">:out-of-range </div>
+                <div class="selector-description">
+                    поля формы, значения которых не входят в установленный диапазон
+                </div>
+            </div>
+            <div class="selector-wrapper-0">
+                <div class="selector-name">
+                    :lang()
+                </div>
+                <div class="selector-description">
+                    элементы с текстом на указанном языке
+                </div>
+            </div>
+            <div class="selector-wrapper-1">
+                <div class="selector-name">:not(селектор)</div>
+                <div class="selector-description">
+                    элементы, которые не содержат указанный селектор — класс,
+                    идентификатор, название или тип поля формы — :not([type="submit"])
+                </div>
+            </div>
+            <div class="selector-wrapper-0">
+                <div class="selector-name">
+                    :target
+                </div>
+                <div class="selector-description">
+                    элемент с символом #, на который ссылаются в документе
+                </div>
+            </div>
+            <div class="selector-wrapper-1">
+                <div class="selector-name">:checked</div>
+                <div class="selector-description">
+                    выделенные (выбранные пользователем) элементы формы
+                </div>
+            </div>
+        </div>
+        <div class="header-name-l2">Селектор структурных псевдоклассов</div>
+        <div class="text-block-animation">
+            Структурные псевдоклассы отбирают дочерние элементы в соответствии с
+            параметром, указанным в круглых скобках:
+            <div class="selector-wrapper-1">
+                <div class="selector-name">
+                    :nth-child(odd)
+                </div>
+                <div class="selector-description">
+                    нечётные дочерние элементы
+                </div>
+            </div>
+            <div class="selector-wrapper-0">
+                <div class="selector-name">:nth-child(even)</div>
+                <div class="selector-description">
+                    чётные дочерние элементы
+                </div>
+            </div>
+            <div class="selector-wrapper-1">
+                <div class="selector-name">
+                    :nth-child(3n)
+                </div>
+                <div class="selector-description">
+                    каждый третий элемент среди дочерних
+                </div>
+            </div>
+            <div class="selector-wrapper-0">
+                <div class="selector-name">:nth-child(3n+2)</div>
+                <div class="selector-description">
+                    выбирает каждый третий элемент, начиная со второго дочернего элемента (+2);
+                </div>
+            </div>
+            <div class="selector-wrapper-1">
+                <div class="selector-name">
+                    :nth-child(n+2)
+                </div>
+                <div class="selector-description">
+                    выбирает все элементы, начиная со второго
+                </div>
+            </div>
+            <div class="selector-wrapper-0">
+                <div class="selector-name">:nth-child(3)</div>
+                <div class="selector-description">
+                    выбирает третий дочерний элемент
+                </div>
+            </div>
+            <div class="selector-wrapper-1">
+                <div class="selector-name">
+                    :nth-last-child()
+                </div>
+                <div class="selector-description">
+                    — в списке дочерних элементов выбирает элемент с указанным
+                    местоположением, аналогично с
+                    <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                        :nth-child()
+                    </span>
+                    , но
+                    начиная с последнего, в обратную сторону
+                </div>
+            </div>
+            <div class="selector-wrapper-0">
+                <div class="selector-name">:first-child </div>
+                <div class="selector-description">
+                    позволяет оформить только самый первый дочерний элемент тега
+                </div>
+            </div>
+            <div class="selector-wrapper-1">
+                <div class="selector-name">
+                    :last-child
+                </div>
+                <div class="selector-description">
+                    позволяет форматировать последний дочерний элемент тега
+                </div>
+            </div>
+            <div class="selector-wrapper-0">
+                <div class="selector-name">
+                    :only-child
+                </div>
+                <div class="selector-description">
+                    выбирает элемент, являющийся единственным дочерним элементом
+                </div>
+            </div>
+            <div class="selector-wrapper-1">
+                <div class="selector-name">:empty</div>
+                <div class="selector-description">
+                    выбирает элементы, у которых нет дочерних элементов
+                </div>
+            </div>
+            <div class="selector-wrapper-0">
+                <div class="selector-name">
+                    :root
+                </div>
+                <div class="selector-description">
+                    выбирает элемент, являющийся корневым в документе — элемент
+                    <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                        html
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="header-name-l2">Селектор структурных псевдоклассов типа</div>
+        <div class="text-block-animation">
+            Указывают на конкретный тип дочернего тега:
+            <div class="selector-wrapper-1">
+                <div class="selector-name">
+                    :nth-of-type()
+                </div>
+                <div class="selector-description">
+                    выбирает элементы по аналогии с
+                    <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                        :nth-child()
+                    </span>, при этом берёт во внимание только тип элемента
+                </div>
+            </div>
+            <div class="selector-wrapper-0">
+                <div class="selector-name">:first-of-type</div>
+                <div class="selector-description">
+                    выбирает первый дочерний элемент данного типа
+                </div>
+            </div>
+            <div class="selector-wrapper-1">
+                <div class="selector-name">
+                    :last-of-type
+                </div>
+                <div class="selector-description">
+                    выбирает последний элемент данного типа
+                </div>
+            </div>
+            <div class="selector-wrapper-0">
+                <div class="selector-name">:nth-last-of-type()</div>
+                <div class="selector-description">
+                    выбирает элемент заданного типа в списке элементов в
+                    соответствии с указанным местоположением, начиная с конца
+                </div>
+            </div>
+            <div class="selector-wrapper-1">
+                <div class="selector-name">
+                    :only-of-type
+                </div>
+                <div class="selector-description">
+                    выбирает единственный элемент указанного типа
+                    среди дочерних элементов родительского элемента
+                </div>
+            </div>
+        </div>
+        <div class="header-name-l2">Селектор псевдоэлемента</div>
+        <div class="text-block-animation">
+            Псевдоэлементы используются для добавления содержимого, которое генерируется с помощью свойства
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                content
+            </span>
+            <div class="selector-wrapper-1">
+                <div class="selector-name">
+                    :first-letter
+                </div>
+                <div class="selector-description">
+                    выбирает первую букву каждого абзаца, применяется только к блочным элементам
+                </div>
+            </div>
+            <div class="selector-wrapper-0">
+                <div class="selector-name">:first-line</div>
+                <div class="selector-description">
+                    выбирает первую строку текста элемента, применяется только к блочным элементам
+                </div>
+            </div>
+            <div class="selector-wrapper-1">
+                <div class="selector-name">
+                    :before
+                </div>
+                <div class="selector-description">
+                    вставляет генерируемое содержимое перед элементом
+                </div>
+            </div>
+            <div class="selector-wrapper-0">
+                <div class="selector-name">:after</div>
+                <div class="selector-description">
+                    добавляет генерируемое содержимое после элемента
+                </div>
+            </div>
+        </div>
+        <div class="header-name-l2">Комбинация селекторов</div>
+        <div class="text-block-animation">
+            Для более точного отбора элементов для форматирования можно использовать комбинации селекторов:
 
+            <div class="selector-wrapper-1">
+                <div class="selector-name">
+                    a[href][title]
+                </div>
+                <div class="selector-description">
+                    выберет все ссылки, для которых заданы атрибуты href
+                    <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                        href
+                    </span> и
+                    <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                        title
+                    </span>
+                </div>
+            </div>
+            <div class="selector-wrapper-0">
+                <div class="selector-name">img[alt*="css"]:nth-of-type(even) </div>
+                <div class="selector-description">
+                    выберет все четные картинки, альтернативный текст которых содержит слово
+                    <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                        css
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="header-name-l2">Групировка селекторов</div>
+        <div class="text-block-animation">
+            Один и тот же стиль можно одновременно применить к нескольким элементам.
+            Для этого необходимо в левой части объявления перечислить через запятую нужные селекторы:
+        </div>
+        <pre class="code-tool code-tool-without-example">
+            <code data-language="css">
+            h1,
+            h2, 
+            p,
+            span {
+                color: tomato;
+                background: white;
+            }
+            </code>
+        </pre>
+    </div>
+</div>
 </body>
+<script src="../js/rainbow-custom.min.js"></script>
+<script type="text/javascript" src="../js/script.js"></script>
 </html>
