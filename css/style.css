@@ -34,6 +34,34 @@ body {
     max-width: 100%;
 }
 
+.note {
+    position: relative;
+    font-family: 'Alegreya', serif;
+    width: 70%;
+    text-align: justify;
+    text-indent: 3%;
+    font-size: 1.3vw;
+    box-sizing: border-box;
+    padding: 2%;
+    background: #7b7b50;
+    color: white;
+    border-radius: 0 20px 20px 0px;
+    margin-bottom: 2%;
+}
+
+.note i {
+    font-size: 3vw;
+}
+
+.note-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 1.5%;
+    background: #e2c25a;
+}
+
 .main-content {
     width: 100%;
     height: 90%;
@@ -86,24 +114,51 @@ body {
 
 
 @-webkit-keyframes gradient {
-    0%{background-position:0% 70%}
-    50%{background-position:100% 31%}
-    100%{background-position:0% 70%}
+    0% {
+        background-position: 0% 70%
+    }
+    50% {
+        background-position: 100% 31%
+    }
+    100% {
+        background-position: 0% 70%
+    }
 }
+
 @-moz-keyframes gradient {
-    0%{background-position:0% 70%}
-    50%{background-position:100% 31%}
-    100%{background-position:0% 70%}
+    0% {
+        background-position: 0% 70%
+    }
+    50% {
+        background-position: 100% 31%
+    }
+    100% {
+        background-position: 0% 70%
+    }
 }
+
 @-o-keyframes gradient {
-    0%{background-position:0% 70%}
-    50%{background-position:100% 31%}
-    100%{background-position:0% 70%}
+    0% {
+        background-position: 0% 70%
+    }
+    50% {
+        background-position: 100% 31%
+    }
+    100% {
+        background-position: 0% 70%
+    }
 }
+
 @keyframes gradient {
-    0%{background-position:0% 70%}
-    50%{background-position:100% 31%}
-    100%{background-position:0% 70%}
+    0% {
+        background-position: 0% 70%
+    }
+    50% {
+        background-position: 100% 31%
+    }
+    100% {
+        background-position: 0% 70%
+    }
 }
 
 .push {
@@ -227,7 +282,7 @@ body {
 }
 
 .code-example li:hover {
-    transform: perspective(900px) rotate3d(180,-45,0,-135deg);
+    transform: perspective(900px) rotate3d(180, -45, 0, -135deg);
 }
 
 .code-example ul {
@@ -258,6 +313,7 @@ body {
     justify-content: flex-start;
     align-items: center
 }
+
 .code-tool-with-example code {
     font-size: 1.2vw;
 }
@@ -270,6 +326,7 @@ body {
     font-size: 1.7vw;
     box-sizing: border-box;
     padding: 2%;
+    position: relative;
 }
 
 .animation-example {
@@ -405,7 +462,7 @@ body {
     padding: 0;
 }
 
-.mobile-menu-close-button-wrapper{
+.mobile-menu-close-button-wrapper {
     height: 8%;
     width: 50%;
     background: transparent;
@@ -433,6 +490,7 @@ body {
     border-radius: 25px;
     margin-bottom: 5%;
 }
+
 .mobile-menu-item a {
     text-decoration: none;
     color: white;
@@ -460,12 +518,31 @@ body {
     code {
         overflow-x: auto;
     }
+
+    .note {
+        position: relative;
+        font-family: 'Alegreya', serif;
+        width: 90%;
+        text-align: justify;
+        text-indent: 3%;
+        font-size: 5.3vw;
+        box-sizing: border-box;
+        padding: 2%;
+        background: #7b7b50;
+        color: white;
+        border-radius: 0 20px 20px 0px;
+        margin-bottom: 2%;
+    }
+
+    .note i {
+        font-size: 7vw;
+    }
+
     .code-and-example {
         flex-direction: column;
     }
 
-    .code-tool-with-example
-    {
+    .code-tool-with-example {
         width: 96%;
     }
 
@@ -585,6 +662,7 @@ body {
         transition: .3s ease-in-out;
         top: 10px;
     }
+
     .push li:after {
         position: absolute;
         border-left: 1px dotted #e1c25a;
@@ -594,6 +672,7 @@ body {
         left: -1px;
         top: 28px;
     }
+
     .page {
         background: inherit;
         position: relative;

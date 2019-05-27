@@ -72,6 +72,112 @@
             </span>
         </div>
         <div class="header-name-l2">Синтаксис</div>
+        <div class="text-block-animation">
+            Функция
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+               calc()
+            </span> принимает в качестве параметра математическое выражение,
+            результат вычисления которого можно использовать как значение CSS свойства.
+            Выражение может включать операторы +, -, *, / с использованием стандартных правил приоритета операторов:
+            <div class="selector-wrapper-1">
+                <div class="selector-name">+</div>
+                <div class="selector-description">
+                    Сложение
+                </div>
+            </div>
+            <div class="selector-wrapper-0">
+                <div class="selector-name">-</div>
+                <div class="selector-description">
+                    Вычитание
+                </div>
+            </div>
+            <div class="selector-wrapper-1">
+                <div class="selector-name">*</div>
+                <div class="selector-description">
+                    Умножение. По крайней мере хоть один из сомножителей должен быть
+                    <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                        &lt;number&gt;
+                    </span>
+                </div>
+            </div>
+            <div class="selector-wrapper-0">
+                <div class="selector-name">/</div>
+                <div class="selector-description">
+                    Деление. Делитель должен быть
+                    <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                        &lt;number&gt;
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="text-block-animation">
+            Операнды в expression могут быть различными выражениями
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                &lt;length&gt;
+            </span>. Если пожелаете, то можете использовать разные единицы измерения для
+            каждого из операндов. Вы также можете использовать скобки, чтобы указать порядок вычисления.
+        </div>
+        <div class="note">
+            <div class="note-line"></div>
+            <i class="fas fa-exclamation"></i>
+            <strong>Внимание</strong>: Деление на ноль выдаст ошибку при парсинге HTML.
+        </div>
+        <div class="note">
+            <div class="note-line"></div>
+            <i class="fas fa-exclamation"></i>
+            <strong>Заметка</strong>: Операторы + и - всегда должны быть по обеим сторонам отеделены пробелом.
+            Выражение
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                calc(50% -8px)
+            </span> будет интерпретировано как величина
+            в процентах и следующее за ним отрицательное число в пикселях (не верное выражение),
+            в то время как
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                 calc(50% - 8px)
+            </span> - правильное выражение, будет интерпретировано как вычитание
+            из процентов длинны в пикселях.
+            Операторы * и / не требуют отделения от операндов знаком пробела, но это не запрещено и даже приветствуется.
+        </div>
+
+        <div class="header-name-l2">Позиционирование объекта в окне с помощью отступа</div>
+        <div class="text-block-animation">
+            <span style="color: #e1c25a; font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;">
+                 calc()
+            </span> делает простым позиционирование объекта с помощью отступа.
+            В этом примере создается баннер занимающий в ширину все окно с отступами по краям в 40px.
+        </div>
+        <div class="code-and-example">
+            <pre class="code-tool-with-example">
+              <code data-language="css">
+            .banner {
+              position: absolute;
+              left: 5%;
+              left: calc(40px);
+              width: 90%;
+              width: calc(100% - 80px);
+              border: solid black 1px;
+              box-shadow: 1px 2px;
+              background-color: yellow;
+              padding: 6px;
+              text-align: center;
+            }
+
+                </code>
+            </pre>
+            <div class ="code-example">
+                <div style="
+                position: absolute;
+                 left: calc(40px);
+                width: calc(100% - 80px);
+              border: solid black 1px;
+              box-shadow: 1px 2px;
+              background-color: yellow;
+              padding: 6px;
+              text-align: center;
+                "></div>
+            </div>
+        </div>
+
     </div>
 </div>
 </body>
